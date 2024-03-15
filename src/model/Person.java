@@ -35,6 +35,7 @@ public class Person {
 			this.surname = "Undefinied";
 	}
 	
+
 	
 	public String getPersonCode() {
 		return personCode;
@@ -48,6 +49,11 @@ public class Person {
 	
 	
 	
+	public Person(String name, String surname, String personCode) {
+		setName(name);
+		setSurname(surname);
+		setPersonCode(personCode);
+	}
 	
 	
 	

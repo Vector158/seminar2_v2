@@ -29,13 +29,14 @@ public class Professor extends Person{
 	//3. constructors
 	public Professor() {
 		super();
+		setpID();
 		setProfDegree(Degree.other);
 	}
 	
-	public Professor(String name, String surname, Degree profDegree) {
+	public Professor(String name, String surname,String personCode, Degree profDegree) {
+		
+		super(name, surname, profDegree);
 		setpID();
-		setName(name);
-		setSurname(surname);
 		setProfDegree(profDegree);
 	}
 	

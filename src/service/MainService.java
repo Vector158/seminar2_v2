@@ -19,9 +19,9 @@ public class MainService {
 	
 	public static void main(String[] args) {
 		Professor pr1 = new Professor();//John Big - default Professor
-		Professor pr2 = new Professor("Karina", "Skirmante", Degree.mg);
-		Professor pr3 = new Professor("Estere", "Vitola", Degree.mg);
-		Professor pr4 = new Professor("Marcis", "Naktins", Degree.mg);
+		Professor pr2 = new Professor("Karina", "Skirmante","12345-123456", Degree.mg);
+		Professor pr3 = new Professor("Estere", "Vitola", "12345-123656",Degree.mg);
+		Professor pr4 = new Professor("Marcis", "Naktins", "12345-121756",Degree.mg);
 		allProfessors.addAll(Arrays.asList(pr1, pr2, pr3, pr4));
 		//TODO take a look to ArrayList class in JAVA documentations
 		for(int i = 0; i < allProfessors.size(); i++) {
