@@ -258,9 +258,37 @@ public class MainService {
 			
 			Student newStudent = new Student(name, surname, personCode);
 			allStudents.add(newStudent);
-			
-			
+		
 		}
 	
+		public static void updateStudentByPersonCode(String inputName, String inputSurname, String inputPersonCode) throws  Exception {
+			if(inputName == null && inputSurname == null && inputPersonCode == null ) throw new Exception("Problem with input argument");
+			
+			for(Student tempSt: allStudents) {
+				if(tempSt.getPersonCode().equals(inputPersonCode)) {
+					tempSt.setName(inputName);
+					tempSt.setSurname(inputSurname);
+					return;
+				}
+			}
+			throw new Exception ("Student is not found");
+		}
+		
+		
+		public static void delteStudentByPersonCode(String inputName, String inputSurname, String inputPersonCode) throws Exception{
+			if(inputPersonCode == null ) throw new Exception("Problem with input argument");
+			
+			for(Student tempSt: allStudents) {
+				if(tempSt.getPersonCode().equals(inputPersonCode)) {
+					allStudents.remove(tempSt);
+					return;
+				}				
+			}
+			throw new Exception ("Student is not found");
+		}
+		
+		
+		
+		
 
 }
