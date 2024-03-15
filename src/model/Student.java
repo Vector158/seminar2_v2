@@ -33,7 +33,6 @@ public class Student extends Person {
 	{
 		super();
 		setsID1();
-
 	}
 	
 	public Student(String name, String surname, String personCode)
