@@ -231,7 +231,36 @@ public class MainService {
 	//calculates how many grades are smaller than 4 in specific course
 	//calculates how many CP professor need to lead
 	
+	//CRUD = creative/retrieve/update/delete
 	
+		public static Student retrieveStudentByPersonCode(String personCode) throws Exception {	
+			//do validation
+			if(personCode == null) throw new Exception("Problem with person code / input arguments");
+			// go through all students in list and check if he is in the list
+			for(Student tempSt: allStudents) {
+				if(tempSt.getPersonCode().equals(personCode)) {
+					return tempSt;
+				}
+			}
+			throw new Exception ("Student not found");
+		}
+		
+		
+		public static void createStudent(String name, String surname, String personCode) throws Exception {
+			// do validation
+			if(personCode == null) throw new Exception("Problem with input argument");
+			//go through every student in allStudent array list
+			for(Student tempSt: allStudents) {
+				if(tempSt.getPersonCode().equals(personCode)) {
+					throw new Exception ("Student already exsists");
+				}
+			}
+			
+			Student newStudent = new Student(name, surname, personCode);
+			allStudents.add(newStudent);
+			
+			
+		}
 	
 
 }
